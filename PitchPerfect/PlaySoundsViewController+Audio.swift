@@ -138,6 +138,15 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
 	
 	// MARK: UI Functions
 	func configureUI(_ playState: PlayingState) {
+		
+		// Setting the aspectFit property manually since it doesn't seem to work in the Attributes Inspector.
+		snailButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+		chipmunkButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+		rabbitButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+		vaderButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+		echoButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+		reverbButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+		
 		switch(playState) {
 		case .playing:
 			setPlayButtonsEnabled(false)
